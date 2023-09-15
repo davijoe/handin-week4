@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-1</title>
+    <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="../resources/loadNavbar.js"></script>
 </head>
 <body>
     <div id="navbar"></div>
         
-    <div id="d1" style="width: 100px;margin: 1px;">&nbsp;</div>
-    <div id="d2" style="width: 100px;margin: 1px;">&nbsp;</div>
-    <div id="d3" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div class="div-colored" id="d1" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div class="div-colored" id="d2" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div class="div-colored" id="d3" style="width: 100px;margin: 1px;">&nbsp;</div>
 
     <button id="colorChangeBtn">Change div colors</button>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        let divs = document.querySelectorAll("div");
+        let divs = document.querySelectorAll("div.div-colored");
 
         for (let i = 0; i < divs.length; i++) {
             divs[i].style.backgroundColor = "olivedrab";

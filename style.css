@@ -1,6 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
 
 .root {
@@ -10,18 +13,8 @@
     --main-color: #E16036;
 }
 
-#backbtn {
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 5px 5px;
-    background-color: #D3D3D3;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #000;
-    font-size: 1.2rem;
-    box-shadow: 2px 2px 2px darkslategrey;
+body {
+    background-color: var(--bg-color);
 }
 
 #navbar {
@@ -82,8 +75,6 @@
     visibility: hidden;
 }
 
-
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -127,39 +118,49 @@
 
 .box-container {
     min-width: 400px;
-    max-width: 600px;
+    max-width: 599px;
     min-height: 6rem;
     display: flex;
     flex-direction: column;
-
+    
     
 }
 .box-top {
-    background-color: #000000;
-    padding: 3px;
+    background-color: #522b07;
     height: 1.7rem;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: #000 10px 15px 5px;
 }
 .box-top p {
     color:#FFF
 }
 .box-top-button {
-    padding: 5px 5px;
-    background-color: #D3D3D3;
+    height: 100%;
+    padding: 7px 7px;
+    background-color: #94864f;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    color: #000;
+    color: #fcfcfc;
     font-size: 0.9rem;
+    font-weight: bolder;
     margin-top: 0;
 }
-.box-top-button:hover {
-    background-color: #7c1004;
+
+#topLeftBtn {
+    border-top-left-radius: 12px;
 }
+#topRightBtn {
+    border-top-right-radius: 12px;
+}
+
+.box-top-button:hover {
+    background-color: #A69658;
+}
+
 .box-bottom {
     padding: 0;
     background-color: #cac9c9;
@@ -169,6 +170,7 @@
     border-bottom-right-radius: 7px;
     font-weight: bold;
     padding-left: 16px;
+    box-shadow: #000 10px 15px 5px;
 }
 
 .div-container {
@@ -200,4 +202,21 @@
     font-size: 1.1rem;
     margin-bottom: 5px;
     cursor: pointer;
+}
+
+.output-div {
+    width: 15%;
+    min-height: 60px;
+    background-color: #522b07;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    border: 1px solid #808080;
+    box-shadow: 3px 3px 3px darkslategrey;
+    font-weight: 500;
+    color: whitesmoke;
 }
