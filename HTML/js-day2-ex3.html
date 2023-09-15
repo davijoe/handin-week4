@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-3</title>
+    <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="../resources/loadNavbar.js"></script>
 </head>
@@ -38,7 +39,7 @@
 
         <script> // 1
             //We need to do something here
-            const name = document.getElementById("name-input").value
+            var name = document.getElementById("name-input").value
             const listViewElement = document.createElement("li");
             listViewElement.appendChild(document.createTextNode(name))
             const ul = document.getElementById("ul1").appendChild(listViewElement)
@@ -64,7 +65,7 @@
         </script>
         <script>
             evt.preventDefault()
-            const name = document.getElementById("name-input").value
+            var name = document.getElementById("name-input").value
             names.push(name);
             makeList();
         </script>

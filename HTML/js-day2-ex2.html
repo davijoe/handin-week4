@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-2</title>
+    <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <script src="../resources/loadNavbar.js"></script>
 </head>
 <body>
     <div id="navbar"></div>
-    
-    <h1>Exercise-2</h1>
-    <div class="div-container" id="outer">
-        <div class="my-div" id="div1">Div #01</div>
-        <div class="my-div" id="div2">Div #02</div>
-        <div class="my-div" id="div3">Div #03</div>
-        <div class="my-div" id="div4">Div #04</div>
-        <div class="my-div" id="div5">Div #05</div>
-        <div class="my-div" id="div6">Div #06</div>
-        <div class="my-div" id="div7">Div #07</div>
-        <div class="my-div" id="div8">Div #08</div>
-        <div class="my-div" id="div9">Div #09</div>
-        <div class="my-div" id="div10">Div #10</div>
-        <div class="my-div" id="div11">Div #11</div>
-        <div class="my-div" id="div12">Div #12</div>
-    </div>
+    <div class="content-container"><br><br>
 
-    <p id="output"></p>
+        <br><br><h1>Exercise-2</h1><br><br>
+        <div class="div-container" id="outer">
+            <div class="my-div" id="div1">Div #01</div>
+            <div class="my-div" id="div2">Div #02</div>
+            <div class="my-div" id="div3">Div #03</div>
+            <div class="my-div" id="div4">Div #04</div>
+            <div class="my-div" id="div5">Div #05</div>
+            <div class="my-div" id="div6">Div #06</div>
+            <div class="my-div" id="div7">Div #07</div>
+            <div class="my-div" id="div8">Div #08</div>
+            <div class="my-div" id="div9">Div #09</div>
+            <div class="my-div" id="div10">Div #10</div>
+            <div class="my-div" id="div11">Div #11</div>
+            <div class="my-div" id="div12">Div #12</div>
+        </div><br><br>
+    
+        <div class="output-div">
+            <p id="output">Tryk på en div</p>
+        </div>
+        
+
+        
+    </div>
+    
+
 
     <!-- <script>
         document.getElementById('div1').addEventListener('click', function() {
@@ -45,7 +55,7 @@
             const target = e.target;
             const outputParagraph = document.getElementById('output');
             if (target.classList.contains('my-div')) {
-                outputParagraph.innerText = "Hi from " + target.id;
+                outputParagraph.innerText = "Hi from box #" + target.id.split('div')[1];
             }
         });
     </script>
