@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-3</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../resources/loadNavbar.js"></script>
 </head>
 <body>
-    <button onclick="goToIndex()" id="backbtn">Tilbage til Index</button><br><br>
+    <div id="navbar"></div>
     
-
     <div class="container">
         <button id="initialize-btn">Load Data</button>
         <ul id="ul1"></ul>
@@ -84,8 +85,8 @@
     </div>
 
     <script>
-
         const names = ["Lars", "Peter", "Jan", "Lise", "Janne"];
+        
 // function makeList() {
 //     const namesUL = document.createElement('ul');
 //     names.map(name => {
@@ -101,8 +102,8 @@
 // makeList();
 
         function makeList(){
-            const lis = names.map(n => `<li>${n}</li>`.join(""));
-            document.getElementById("ul1").innerHTML = lis;
+            const namesUL = names.map(n => `<li>${n}</li>`.join(""));
+            document.getElementById("ul1").innerHTML = namesUL;
         }
         document.getElementById("initialize-btn").onclick = ()=> makeList();
 

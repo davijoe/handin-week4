@@ -5,95 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 1</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../resources/loadNavbar.js"></script>
 </head>
 <body>
-    <button onclick="goToIndex()" id="backbtn">Tilbage til Index</button><br><br>
+    <div id="navbar"></div>
+<div class="content-container">
+    <div class="content-div">
+            <!--The HTML for dynamic code block box -->
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-1</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+            <pre><code>        
+    function add(n1, n2){
+        return n1 +n2;
+    }
+        
+    const sub = function(n1,n2){
+        return n1 - n2
+    } 
+        
+    const cb = function(n1,n2, callback){
+        return "Result from the two numbers: "+n1+"+"+n2+"="+callback(n1,n2);
+    };
+    </code></pre></div><br><br>
+        
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-2</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+                <pre><code>        
+    console.log( add(1,2) )       // viser 3
+    console.log( add )            // funktionen bliver vist
+    console.log( add(1,2,3) ) ;   // viser 3
+    console.log( add(1) );	      // viser NaN
+    console.log( cb(3,3,add) );   // viser 3+3=6
+    console.log( cb(4,3,sub) );   // viser 4+3=1
+    console.log(cb(3,"hh",add));  // viser 3+hh=3hh
+            </code></pre></div><br><br>
+        
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-3</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+                <pre><code>    
+    function mul(n1, n2) {
+        return n1 * n2;
+    }
 
-<!--The HTML for dynamic code block box -->
-<div class="box-container">
-    <div class="box-top">
-        <p></p>
-        <p class="title">Exercise-1</p>
-        <button class="box-top-button">Copy</button>
+    const cb = function(n1,n2, callback){
+        return "Result from the two numbers: "+n1+"+"+n2+"="+callback(n1,n2);
+    };
+
+    console.log(cb(5, 3, mul)); // "Result from the two numbers: 5+3=15"
+
+    console.log(cb(10, 2, function(n1, n2){
+        return n1 / n2
+    ;})); // "Result from the two numbers: 10+2=5"
+            </code></pre></div><br><br>
+        
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-4</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+                <pre><code>
+    const names = ['Lars', 'Jan', 'Peter', 'Bo', 'Frederik'];
+
+    const uppercasedNames = names.map(name => name.toUpperCase());
+    
+    console.log(uppercasedNames);    
+            </code></pre></div><br><br>
+        
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-5</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+                <pre><code>
+    function namesToHTMLList(namesArray) {
+        const items = namesArray.map(name => `<li>${name}</li>`).join(' ');
+        return `<ul> ${items} </ul>`;
+        }
+        
+        const names = ["Lars", "Peter", "Jan", "Ian"];
+        console.log(namesToHTMLList(names));
+            </code></pre></div><br><br>
+
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-5</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+                <pre><code>
+        
+            </code></pre></div><br><br>
+
+            <div class="box-container">
+                <div class="box-top">
+                    <p></p>
+                    <p class="title">Exercise-5</p>
+                    <button class="box-top-button">Copy</button>
+                </div>
+                
+                <div class="box-bottom">
+                <pre><code>
+        
+            </code></pre></div><br><br>
     </div>
+
+
     
-    <div class="box-bottom">
-      <pre><code>function add(n1, n2){
-    return n1 +n2;
-}
-    
-const sub = function(n1,n2){
-    return n1 - n2
-} 
-    
-const cb = function(n1,n2, callback){
-    return "Result from the two numbers: "+n1+"+"+n2+"="+callback(n1,n2);
-};</code></pre></div><br><br>
-
-<div class="box-container">
-    <div class="box-top">
-        <p></p>
-        <p class="title">Exercise-2</p>
-        <button class="box-top-button">Copy</button>
-    </div>
-    
-    <div class="box-bottom">
-      <pre><code>console.log( add(1,2) )       // viser 3
-console.log( add )            // funktionen bliver vist
-console.log( add(1,2,3) ) ;   // viser 3
-console.log( add(1) );	      // viser NaN
-console.log( cb(3,3,add) );   // viser 3+3=6
-console.log( cb(4,3,sub) );   // viser 4+3=1
-console.log(cb(3,"hh",add));  // viser 3+hh=3hh
-</code></pre></div><br><br>
-
-<div class="box-container">
-    <div class="box-top">
-        <p></p>
-        <p class="title">Exercise-3</p>
-        <button class="box-top-button">Copy</button>
-    </div>
-    
-    <div class="box-bottom">
-      <pre><code>function mul(n1, n2) {
-    return n1 * n2;
-}
-
-const cb = function(n1,n2, callback){
-    return "Result from the two numbers: "+n1+"+"+n2+"="+callback(n1,n2);
-};
-
-console.log(cb(5, 3, mul)); // "Result from the two numbers: 5+3=15"
-
-console.log(cb(10, 2, function(n1, n2){
-    return n1 / n2
-;})); // "Result from the two numbers: 10+2=5"</code></pre></div><br><br>
-
-<div class="box-container">
-    <div class="box-top">
-        <p></p>
-        <p class="title">Exercise-4</p>
-        <button class="box-top-button">Copy</button>
-    </div>
-    
-    <div class="box-bottom">
-      <pre><code>
-
-</code></pre></div><br><br>
-
-<div class="box-container">
-    <div class="box-top">
-        <p></p>
-        <p class="title">Exercise-5</p>
-        <button class="box-top-button">Copy</button>
-    </div>
-    
-    <div class="box-bottom">
-      <pre><code>
-
-</code></pre></div><br><br>
 
 
+
+</div>
 
 
 </body>
