@@ -6,6 +6,7 @@
     <title>Exercise-1</title>
 </head>
 <body>
+    <button onclick="goToIndex()" id="backbtn">Tilbage til Index</button><br><br>
     
     <div id="d1" style="width: 100px;margin: 1px;">&nbsp;</div>
     <div id="d2" style="width: 100px;margin: 1px;">&nbsp;</div>
@@ -21,14 +22,15 @@
             divs[i].style.backgroundColor = "olivedrab";
         }
         
-        document.getElementById("colorButton").addEventListener("click", function() {
-            let colors = ["red", "yellow", "green"];
+        document.getElementById("colorChangeBtn").addEventListener("click", function() {
+            let colors = ["red", "blue", "white"];
             for (let i = 0; i < divs.length; i++) {
                 divs[i].style.backgroundColor = colors[i];
+                document.getElementsByTagName("body")[0].style.backgroundColor = "grey";
             }
         });
     });     
     </script>
-
 </body>
+    <script src="../main.js"></script>
 </html>

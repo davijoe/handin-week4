@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-2</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
+    <button onclick="goToIndex()" id="backbtn">Tilbage til Index</button><br><br>
+
+    <h1>Exercise-2</h1>
+    <div class="div-container" id="outer">
+        <div class="my-div" id="div1">Div #01</div>
+        <div class="my-div" id="div2">Div #02</div>
+        <div class="my-div" id="div3">Div #03</div>
+        <div class="my-div" id="div4">Div #04</div>
+        <div class="my-div" id="div5">Div #05</div>
+        <div class="my-div" id="div6">Div #06</div>
+        <div class="my-div" id="div7">Div #07</div>
+        <div class="my-div" id="div8">Div #08</div>
+        <div class="my-div" id="div9">Div #09</div>
+        <div class="my-div" id="div10">Div #10</div>
+        <div class="my-div" id="div11">Div #11</div>
+        <div class="my-div" id="div12">Div #12</div>
+    </div>
+
+    <p id="output"></p>
+
+    <!-- <script>
+        document.getElementById('div1').addEventListener('click', function() {
+            console.log("Hi from div1");
+        });
+
+        document.getElementById('div2').addEventListener('click', function() {
+            console.log("Hi from div2");
+        });
+        document.getElementById('div3').addEventListener('click', function() {
+            console.log("Hi from div3");
+        });
+    </script> -->
+    <script>
+        document.getElementById('outer').addEventListener('click', function(e) {
+            const target = e.target;
+            const outputParagraph = document.getElementById('output');
+            if (target.classList.contains('my-div')) {
+                outputParagraph.innerText = "Hi from " + target.id;
+            }
+        });
+    </script>
 </body>
+    <script src="../main.js"></script>
 </html>
