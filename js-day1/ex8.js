@@ -1,8 +1,7 @@
+//Getting comfortable with filter, map and forEach
+// exerise 1,2,3
 function namesToHTMLList(namesArray) {
-  // Convert each name into an HTML list item
   const items = namesArray.map(name => `<li>${name}</li>`).join(' ');
-
-  // Wrap the items in <ul> tags
   return `<ul> ${items} </ul>`;
 }
 
