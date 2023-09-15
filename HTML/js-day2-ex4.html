@@ -11,7 +11,30 @@
     <div id="navbar"></div>
     <div class="content-container">
 
-
+        <select id="car-selector">
+            <!-- Options will be populated by JavaScript -->
+        </select><br><br>
+        <h2>Selected Brand</h2><br>
+        <!-- bruger logo med tekst i stedet for header4
+        <h4 id="car-make"></h4>
+        -->
+        <img src="../resources/img/bx-car.svg" alt="car-brand-logo" id="car-make-logo">
+            
+        <script>
+        const cars = ["Ford", "VW", "Toyota", "Volvo"]; //Assume this was fetched from the backend
+        const carSelector = document.getElementById("car-selector");
+        //todo: add code here to add options to the select tag
+        cars.forEach(car => {
+            const option = document.createElement("option");
+            option.value = car;
+            option.text = car;
+            carSelector.appendChild(option);
+        });
+        carSelector.addEventListener("change", (event) => {
+            document.getElementById("car-make-logo").src = `../resources/img/${event.target.value}.svg`;
+        });
+        </script>
+            
 
 
         
