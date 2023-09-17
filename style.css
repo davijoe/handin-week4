@@ -385,5 +385,93 @@ body {
     height: 50px;
     font-size: 2rem;
     display: flex;
+}
 
+.car-table-container {
+    width: 70vw;
+    margin: 20px auto; /* Automatically determine left/right margins to center the container horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the child items horizontally */
+}
+
+.car-table-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.car-table-container button {
+    padding: 5px;
+    border: 1px solid #000;
+    box-shadow: 5px 5px 5px #000000;
+    width: 40%;
+    height: 40px;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    background-color: #522b07;
+    color: #cac9c9;
+    font-weight: 700;
+}
+.car-table-container input {
+    padding: 5px;
+    border: 1px solid #000;
+    box-shadow: 5px 5px 5px #000000;
+    width: 60%;
+    height: 40px;
+    font-size: 1.6rem;
+    background-color: #522b07;
+    color: #fffefe;
+    font-weight: 700;
+}
+
+#car-table {
+    text-align: left;
+    width: 100%; /* Making the table take the full width of its container */
+    border-collapse: collapse; /* Removing spaces between borders of cells */
+    margin: 20px 0; /* Giving some spacing above and below the table */
+}
+
+#car-table th {
+    text-align: left;
+    background-color: #522b07; /* Using the darkest color for table headers for contrast */
+    color: #cacaca; /* Light color for the text in the table headers */
+    padding: 10px 15px; /* Some padding to give the headers breathing space */
+    text-align: left; /* Aligning text to the left; can change based on preference */
+    font-size: 1.6rem;
+    font-weight: bold; /* Making the header text bold */
+    width: 15vw;
+}
+#car-table th:nth-child(1), #car-table td:nth-child(1) {
+    text-align: center;
+    font-size: 1.2rem;
+}
+#car-table th:nth-child(2), #car-table td:nth-child(2),
+#car-table th:nth-child(3), #car-table td:nth-child(3) {
+    text-align: center;
+}
+
+#car-table th:nth-child(4), #car-table td:nth-child(4) {
+    text-align: right;
+    margin-right: 50px;
+}
+
+#car-table td {
+    background-color: #94864f; /* Using the middle color for table data cells */
+    color: #522b07; /* Using the darkest color for the text to contrast with the cell's background color */
+    padding: 8px 15px; /* Some padding for the data cells */
+    border-bottom: 1px solid #cacaca; /* Adding a light border at the bottom of each row to separate them */
+    width: 20vw;
+    font-size: 1.0rem;
+    font-weight: 900;
+}
+
+#car-table tr:hover td {
+    background-color: #cacaca; /* A lighter color for the hover effect */
+    color: #522b07; /* Retaining the darker color for the text during hover */
+}
+
+/* If you'd like to add some spacing between rows, consider a slight margin and use display:block; */
+#car-table tr {
+    margin: 5px 0;
 }
