@@ -1,4 +1,3 @@
 # handin-week4
 
-Deployed som static web app på:
-https://www.danviktor.dk/
+### Deployed as static website på <br><br><b>https://www.danviktor.dk/</b>
