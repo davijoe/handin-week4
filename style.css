@@ -133,7 +133,7 @@ body {
 
 .box-container {
     margin-top: 10px;
-    min-width: 400px;
+    min-width: 420px;
     max-width: 599px;
     min-height: 6rem;
     display: flex;
@@ -179,11 +179,11 @@ body {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    left: -35vh;
+    top: 0px;
+    width: 170vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
 .modal-content {

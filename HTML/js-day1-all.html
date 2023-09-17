@@ -77,8 +77,8 @@
     <div id="infoModal2" class="modal">
         <div class="modal-content">
             <span id="closeModal" class="close">&times;</span>
-            <h3 class="modalh3">header</h3>
-            <p class="modalp">This is some information...</p>
+            <h3 class="modalh3">Callbacks</h3><br>
+            <p class="modalp">Call the functions above as sketched below.  It’s not about doing it as fast as you can, but about understanding what's happening, so make sure you understand each line.</p>
         </div>
     </div>    
 
@@ -106,7 +106,15 @@
         return n1 / n2
     ;})); // "Result from the two numbers: 10+2=5"
             </code></pre></div><br><br>
-        
+    <!-- Info Modal -->
+    <div id="infoModal3" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">More Callbacks </h3><br>
+            <p class="modalp">&rArr;  Write a mul(n1, n2) function (inspired by add and sub) and use it as the callback for the cb function <br>
+                <br>&rArr; Call cb, this time with an anonymous function that divides the first argument with the second</p>
+        </div>
+    </div>    
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal4" id="topLeftBtn4">Info</button>
@@ -122,11 +130,22 @@
     
     console.log(uppercasedNames);    
             </code></pre></div><br><br>
-        
+    <!-- Info Modal -->
+    <div id="infoModal4" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">Getting comfortable with filter, map and forEach</h3><br>
+            <p class="modalp">
+                1. Declare a JavaScript array and initialise it with some names 
+                <br>2. Use the filter method to create a new array with only names of <br>length &lt;= 3
+                <br>3. Use the forEach method to iterate and print console.log
+            </p>
+        </div>
+    </div>    
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal5" id="topLeftBtn4">Info</button>
-                    <p class="title">Exercise-5</p>
+                    <p class="title">Map Method</p>
                     <button class="box-top-button modal-btn" data-modal-target="infoModal5" id="topRightBtn5">Copy</button>
                 </div>
                 
@@ -139,11 +158,20 @@
     const names = ["Lars", "Peter", "Jan", "Ian"];
     console.log(namesToHTMLList(names));
             </code></pre></div><br><br>
-
+    <!-- Info Modal -->
+    <div id="infoModal5" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">Map Method</h3><br>
+            <p class="modalp"> Use the names-array created above, and, using its map method, 
+               <br>create a new array with all names uppercased.
+            </p>
+        </div>
+    </div> 
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal6" id="topLeftBtn6">Info</button>
-                    <p class="title">Exercise-5</p>
+                    <p class="title">Filter Function and Arrays</p>
                     <button class="box-top-button modal-btn" data-modal-target="infoModal6" id="topRightBtn6">Copy</button>
                 </div>
                 
@@ -165,52 +193,76 @@
     console.log(allVolvos);
     console.log(carsBelow5000);
             </code></pre></div><br><br>
-
+    <!-- Info Modal -->
+    <div id="infoModal6" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">More Filter Function and Arrays</h3><br>
+            <p class="modalp">Use the filter function to get arrays with only:
+                <br> 1. Cars newer than 1999
+                <br>2. All Volvo's
+                <br>3. All cars with a price below 5000
+            </p>
+        </div>
+    </div> 
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal7" id="topLeftBtn7">Info</button>
-                    <p class="title">Exercise-5</p>
+                    <p class="title">myFilter Function and Callbacks</p>
                     <button class="box-top-button modal-btn" data-modal-target="infoModal7" id="topRightBtn7">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
                 <pre><code>
-    const cars = [
-        { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
-        { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
-        { id: 3, year: 2000, make: 'Chevy', model: 'Venture', price: 5000 },
-        { id: 4, year: 1996, make: 'Jeep', model: 'Grand Cherokee', price: 4799 },
-        { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
-    ];
-    
-    function myFilter(array, callback){
-        const result = [];
-        for(let i = 0; i < array.length; i++) {
-            if(callback(array[i], i, array)) {
-                result.push(array[i]);
-            }
+ const cars = [
+     { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
+     { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
+     { id: 3, year: 2000, make: 'Chevy', model: 'Venture', price: 5000 },
+     { id: 4, year: 1996, make: 'Jeep', model: 'Grand Cherokee', price: 4799 },
+     { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
+ ];
+ function myFilter(array, callback){
+    const result = [];
+    for(let i = 0; i < array.length; i++) {
+        if(callback(array[i], i, array)) {
+            result.push(array[i]);
         }
-        return result;
     }
-    
-    const carsBelow5000 = myFilter(cars, car => car.price < 5000);
-    console.log(carsBelow5000);
-    
-    function myMap(array, callback) {
-        const result = [];
-        for(let i = 0; i < array.length; i++) {
-            result.push(callback(array[i], i, array));
-        }
-        return result;
+    return result;
+ }
+ const carsBelow5000 = myFilter(cars, car => car.price < 5000);
+ console.log(carsBelow5000);
+ function myMap(array, callback) {
+    const result = [];
+    for(let i = 0; i < array.length; i++) {
+        result.push(callback(array[i], i, array));
     }
-    
-    const carMakes = myMap(cars, car => car.make);
-    console.log(carMakes);    
+    return result;
+ }
+
+ const carMakes = myMap(cars, car => car.make);
+ console.log(carMakes);    
             </code></pre></div><br><br>
+    <!-- Info Modal -->
+    <div id="infoModal7" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">myFilter Function</h3><br>
+            <p class="modalp">This is some information...
+                Implement YOUR OWN functions that takes callbacks as arguments
+                <br><br>Assume the array did NOT offer the map and filter methods. Then you would have to implement them yourself.  This is what you should do in the following to get practice with writing functions that take callbacks as arguments.
+                <br><br>The next two functions should work exactly as the arrays built in methods, except that you will need to pass the array to be used, into the functions.
+                <br><br><b>A.</b>  Implement a function: myFilter(array, callback)that takes an array as the first argument, and a callback as the second and returns a new (filtered) array according to the code provided in the callback
+                <br><br><b>B.</b>  Implement a function: myMap(array, callback)that, provided an array and a callback, provides the same functionality as calling the existing map method on an array.
+
+
+            </p>
+        </div>
+    </div> 
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal8" id="topLeftBtn8">Info</button>
-                    <p class="title">Exercise-5</p>
+                    <p class="title">Asynchronous Callbacks</p>
                     <button class="box-top-button modal-btn" data-modal-target="infoModal8" id="topRightBtn8">Copy</button>
                 </div>
                 
@@ -225,10 +277,23 @@
     msgPrinter ("eeeeeeeeee",1000); // efter 1 sekund
     console.log("ffffffffff");      // instant-ish + meget lidt men efter d
             </code></pre></div><br><br>
+    <!-- Info Modal -->
+    <div id="infoModal8" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">Asynchronous Callbacks</h3><br>
+            <p class="modalp">
+                Given the code below answer, don’t execute the code, 
+                <br>in what order you would expect to see the outputs
+                <br><br>Add the code to a javascript file, execute and 
+                <br>verify whether you answer to #1 was right
+            </p>
+        </div>
+    </div> 
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal9" id="topLeftBtn9">Info</button>
-                    <p class="title">Exercise-5</p>
+                    <p class="title">JavaScript Objects</p>
                     <button class="box-top-button modal-btn" data-modal-target="infoModal9" id="topRightBtn9">Copy</button>
                 </div>
                 
@@ -257,6 +322,19 @@
         console.log(prop, JavaScriptDay1Opgaver[prop]);
     }
             </code></pre></div><br><br>
+    <!-- Info Modal -->
+    <div id="infoModal9" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">JavaScript Objects</h3><br>
+            <p class="modalp">
+                1. Create an object with four different properties, with values of your own choice
+                <br><br>2. Use a for-in loop (as sketched below) to demonstrate that we can iterate over the properties in an object.
+                <br><br>3. Use the delete keyword to demonstrate we can delete existing properties from an object
+                <br><br>4. Add a new property to your object to demonstrate that we can add new properties to existing objects
+            </p>
+        </div>
+    </div> 
             <div class="box-container">
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal10" id="topLeftBtn10">Info</button>
@@ -307,6 +385,20 @@
     person.setAge(45);
     console.log(person.getInfo());
             </code></pre></div><br><br>
+    <!-- Info Modal -->
+    <div id="infoModal10" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">Closures in JavaScript</h3><br>
+            <p class="modalp">
+                1. Implement and test the Closure Counter Example from the Slides
+                <br><br>Implement a reusable function using the Module pattern that should encapsulate information about a person (name, and age) and return an object with the following methods:
+                <br><br>A. setAge
+                <br>B. setName
+                <br>C. getInfo (should return a string like Peter, 45)
+            </p>
+        </div>
+    </div> 
 </div>
 
     <script src="../resources/loadNavbar.js"></script>
