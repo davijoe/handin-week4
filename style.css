@@ -4,6 +4,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
+
 }
 
 .root {
@@ -14,19 +15,30 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: #b8b5b5;
+    position: relative;
+}
+
+.content-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
 }
 
 #navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100vw;
     background-color: #522b07;
-    padding: 10px 0 0 5px;
-    padding-right: 20px;
+    padding: 10px;
     position: sticky;
     font-size: 2rem;
-    margin-bottom: 20px;
 }
 
 #navbar a{
@@ -106,24 +118,24 @@ body {
     top: 0;
     width: 100%;
 }
-.sticky + .content-container {
-    padding-top: 60px;
-}
+
 .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+}
+
+#first-box {
+    margin-top: 5rem;
 }
 
 .box-container {
+    margin-top: 10px;
     min-width: 400px;
     max-width: 599px;
     min-height: 6rem;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column;   
 }
 .box-top {
     background-color: #522b07;
@@ -163,7 +175,7 @@ body {
 
 .box-bottom {
     padding: 0;
-    background-color: #cac9c9;
+    background-color: #d3d0d0;
     flex-grow: 1;
     overflow: auto;
     border-bottom-left-radius: 7px;
@@ -171,6 +183,7 @@ body {
     font-weight: bold;
     padding-left: 16px;
     box-shadow: #000 10px 15px 5px;
+    color: #660e0e;
 }
 
 .div-container {
@@ -202,11 +215,21 @@ body {
     font-size: 1.1rem;
     margin-bottom: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.my-div:hover {
+    background-color: #000;
+    color: #FFF;
+}
+.my-div.clicked {
+    background-color: #fff;
+    color: #000;
 }
 
 .output-div {
     width: 15%;
     min-height: 60px;
+    width: fit-content;
     background-color: #522b07;
     border-radius: 5px;
     padding: 10px;
@@ -219,4 +242,12 @@ body {
     box-shadow: 3px 3px 3px darkslategrey;
     font-weight: 500;
     color: whitesmoke;
+}
+
+#car-selector {
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    display: flex;
+
 }

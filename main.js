@@ -13,3 +13,18 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+var myDivs = document.getElementsByClassName('my-div');
+
+for (var i = 0; i < myDivs.length; i++) {
+    myDivs[i].addEventListener('click', function() {
+        this.classList.add('clicked');
+
+        let currentDiv = this;
+
+        setTimeout(function() {
+            currentDiv.classList.remove('clicked');
+        }, 300);
+    });
+}
