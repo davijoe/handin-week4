@@ -92,25 +92,27 @@ body {
     display: inline-block;
 }
 
-.dropdown-content {
+#dropdownContent {
     display: none;
     position: absolute;
-    background-color: #808080;
-    min-width: 150px;
-    z-index: 1;
+    background-color: #522b07;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown-content a {
-    color: #FFF;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
+#dropdownToggle {
+    display: none;
+    cursor: pointer;
 }
-
+#dropdownToggle img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
 .dropdown-content a:hover {
-    background-color: #000;
-    color: #FFF;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .sticky {
@@ -162,15 +164,49 @@ body {
     margin-top: 0;
 }
 
-#topLeftBtn {
+#topLeftBtn1, #topLeftBtn2, #topLeftBtn3, #topLeftBtn4, #topLeftBtn5, #topLeftBtn6, #topLeftBtn7, #topLeftBtn8, #topLeftBtn9, #topLeftBtn10 {
     border-top-left-radius: 12px;
 }
-#topRightBtn {
+#topRightBtn1, #topRightBtn2, #topRightBtn3, #topRightBtn4, #topRightBtn5, #topRightBtn6, #topRightBtn7, #topRightBtn8, #topRightBtn9, #topRightBtn10 {
     border-top-right-radius: 12px;
 }
 
 .box-top-button:hover {
     background-color: #A69658;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #522b07;
+    color: #e2e2e2;
+    font-weight: 600;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #5f5f5f;
+    width: 30%;
+}
+
+.close {
+    color: #94864f;
+    float: right;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .box-bottom {

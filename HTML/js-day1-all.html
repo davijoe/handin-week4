@@ -6,7 +6,6 @@
     <title>Day 1</title>
     <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
-    <script src="../resources/loadNavbar.js"></script>
 </head>
 <body>
     <div id="navbar"></div>
@@ -17,11 +16,11 @@
             <div class="box-container" id="first-box">
                 <div class="box-top">
 
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal1" id="topLeftBtn1">Info</button>
 
                     <p class="title">Functions and Callbacks - Exercise 1</p>
                     
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal1" id="topRightBtn1">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -38,12 +37,30 @@
         return "Result from the two numbers: "+n1+"+"+n2+"="+callback(n1,n2);
     };
     </code></pre></div><br><br>
-        
+    
+    <!-- Info Modal -->
+    <div id="infoModal1" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">Create a new JavaScript file and add these three functions</h3><br>
+        <p class="modalp">function add(n1, n2){ <br>
+            return n1 +n2; <br>
+         } <br>
+         <br>const sub = function(n1,n2){<br>
+           return n1 - n2<br>
+         } <br>
+         <br>const cb = function(n1,n2, callback){
+           return "Result from the two numbers: "+n1+"+"+n2+"="+callback(n1,n2);<br>
+        };
+        </p>
+        </div>
+    </div>
+
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal2" id="topLeftBtn2">Info</button>
                     <p class="title">Functions and Callbacks - Exercise 2</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal2" id="topRightBtn2">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -56,12 +73,21 @@
     console.log( cb(4,3,sub) );   // viser 4+3=1
     console.log(cb(3,"hh",add));  // viser 3+hh=3hh
             </code></pre></div><br><br>
-        
+    <!-- Info Modal -->
+    <div id="infoModal2" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 class="modalh3">header</h3>
+            <p class="modalp">This is some information...</p>
+        </div>
+    </div>    
+
+
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal3" id="topLeftBtn3">Info</button>
                     <p class="title">Functions and Callbacks - Exercises 4 + 5</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal3" id="topRightBtn3">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -83,9 +109,9 @@
         
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal4" id="topLeftBtn4">Info</button>
                     <p class="title">Callbacks with map, filter, and forEach - Exercise 1 + 2</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal4" id="topRightBtn4">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -99,9 +125,9 @@
         
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal5" id="topLeftBtn4">Info</button>
                     <p class="title">Exercise-5</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal5" id="topRightBtn5">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -116,9 +142,9 @@
 
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal6" id="topLeftBtn6">Info</button>
                     <p class="title">Exercise-5</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal6" id="topRightBtn6">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -142,9 +168,9 @@
 
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal7" id="topLeftBtn7">Info</button>
                     <p class="title">Exercise-5</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal7" id="topRightBtn7">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -183,9 +209,9 @@
             </code></pre></div><br><br>
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal8" id="topLeftBtn8">Info</button>
                     <p class="title">Exercise-5</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal8" id="topRightBtn8">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -201,9 +227,9 @@
             </code></pre></div><br><br>
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal9" id="topLeftBtn9">Info</button>
                     <p class="title">Exercise-5</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal9" id="topRightBtn9">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -233,9 +259,9 @@
             </code></pre></div><br><br>
             <div class="box-container">
                 <div class="box-top">
-                    <button class="box-top-button" id="topLeftBtn">Info</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal10" id="topLeftBtn10">Info</button>
                     <p class="title">JavaScript Closures</p>
-                    <button class="box-top-button" id="topRightBtn">Copy</button>
+                    <button class="box-top-button modal-btn" data-modal-target="infoModal10" id="topRightBtn10">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
@@ -282,6 +308,8 @@
     console.log(person.getInfo());
             </code></pre></div><br><br>
 </div>
-</body>
+
+    <script src="../resources/loadNavbar.js"></script>
     <script src="../main.js"></script>
+</body>   
 </html>
