@@ -442,6 +442,13 @@ body {
     font-weight: bold; /* Making the header text bold */
     width: 15vw;
 }
+#car-table .toggle-show-button{
+    position: relative;
+}
+#car-table .toggle-show-button:hover{
+    background-color: #A69658;
+}
+
 #car-table th:nth-child(1), #car-table td:nth-child(1) {
     text-align: center;
     font-size: 1.2rem;

@@ -17,6 +17,7 @@
         <h1 style="text-decoration: underline;">Create dynamic table-rows</h1>
 
         <br><table id="car-table">
+            <button id="toggle-btn" class="toggle-show-button">Show More</button>
             <tr>
                 <th>Brand</th>
                 <th>Model</th>
@@ -24,15 +25,18 @@
             </tr>
             <!-- Rows will be populated by JavaScript -->
         </table>
+        <p id="filter-result"></p>
+        <input type="text" id="filter-input" placeholder="Enter brand">
         <br><br>
         <button id="sort-btn">Sort by year</button>
         <button id="filter-btn">Filter by brand</button>
         <button id="reset-btn">Reset</button>
         <br><br>
-        <input type="text" id="filter-input" placeholder="Enter brand">
+        
         <br><br>
-        <p id="filter-result"></p>
+        
         <br><br>
+        
 
         
     </div>
