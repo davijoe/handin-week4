@@ -51,3 +51,33 @@ window.onclick = function(event) {
       event.target.style.display = "none";
   }
 }
+
+
+document.addEventListener('click', function(e) {
+  if (e.target.id.startsWith('topRightBtn')) {
+      const targetCodeId = e.target.getAttribute('data-code-target');
+      const targetCode = document.getElementById(targetCodeId);
+      const codeButton = document.getElementById('topRightBtn');
+
+      // Toggle the clicked class
+      e.target.classList.add('clicked');
+      setTimeout(function() {
+          e.target.classList.remove('clicked');
+      }, 300);
+
+      const textarea = document.createElement('textarea');
+      textarea.value = targetCode.innerText;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+
+      // Optionally, give some feedback that text was copied
+      //alert('Code copied to clipboard!');
+      const originalText = e.target.innerText;
+      e.target.innerText = "Copied!";
+      setTimeout(function() {
+          e.target.innerText = originalText;
+      }, 500);
+  }
+});

@@ -20,11 +20,11 @@
 
                     <p class="title">Functions and Callbacks - Exercise 1</p>
                     
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal1" id="topRightBtn1">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code1" id="topRightBtn1">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-            <pre><code>        
+            <pre><code id="code1">        
     function add(n1, n2){
         return n1 +n2;
     }
@@ -60,11 +60,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal2" id="topLeftBtn2">Info</button>
                     <p class="title">Functions and Callbacks - Exercise 2</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal2" id="topRightBtn2">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code2" id="topRightBtn2">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>        
+                <pre><code id="code2">         
     console.log( add(1,2) )       // viser 3
     console.log( add )            // funktionen bliver vist
     console.log( add(1,2,3) ) ;   // viser 3
@@ -87,11 +87,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal3" id="topLeftBtn3">Info</button>
                     <p class="title">Functions and Callbacks - Exercises 4 + 5</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal3" id="topRightBtn3">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code3" id="topRightBtn3">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>    
+                <pre><code id="code3">     
     function mul(n1, n2) {
         return n1 * n2;
     }
@@ -119,11 +119,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal4" id="topLeftBtn4">Info</button>
                     <p class="title">Callbacks with map, filter, and forEach - Exercise 1 + 2</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal4" id="topRightBtn4">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code4" id="topRightBtn4">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code4"> 
     const names = ['Lars', 'Jan', 'Peter', 'Bo', 'Frederik'];
 
     const uppercasedNames = names.map(name => name.toUpperCase());
@@ -146,11 +146,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal5" id="topLeftBtn4">Info</button>
                     <p class="title">Map Method</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal5" id="topRightBtn5">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code5" id="topRightBtn5">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code5"> 
     function namesToHTMLList(namesArray) {
         const items = namesArray.map(name => `&lt;li&gt;${name}&lt;/li&gt;`).join(' ');
         return `&lt;ul&gt; ${items} &lt;/ul&gt;`;
@@ -172,11 +172,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal6" id="topLeftBtn6">Info</button>
                     <p class="title">Filter Function and Arrays</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal6" id="topRightBtn6">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code6" id="topRightBtn6">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code6"> 
     const cars = [
     { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
     { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
@@ -209,11 +209,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal7" id="topLeftBtn7">Info</button>
                     <p class="title">myFilter Function and Callbacks</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal7" id="topRightBtn7">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code7" id="topRightBtn7">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code7"> 
  const cars = [
      { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
      { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
@@ -263,11 +263,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal8" id="topLeftBtn8">Info</button>
                     <p class="title">Asynchronous Callbacks</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal8" id="topRightBtn8">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code8" id="topRightBtn8">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code8"> 
     const msgPrinter = function(msg,delay){
         setTimeout(() => console.log(msg),delay); //Observe an arrow-function
     };
@@ -294,11 +294,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal9" id="topLeftBtn9">Info</button>
                     <p class="title">JavaScript Objects</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal9" id="topRightBtn9">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code9" id="topRightBtn9">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code9"> 
     const JavaScriptDay1Opgaver = {
         antal: "for mange",
         sværhedsgrad: "for let",
@@ -339,11 +339,11 @@
                 <div class="box-top">
                     <button class="box-top-button modal-btn" data-modal-target="infoModal10" id="topLeftBtn10">Info</button>
                     <p class="title">JavaScript Closures</p>
-                    <button class="box-top-button modal-btn" data-modal-target="infoModal10" id="topRightBtn10">Copy</button>
+                    <button class="box-top-button code-btn" data-code-target="code10" id="topRightBtn10">Copy</button>
                 </div>
                 
                 <div class="box-bottom">
-                <pre><code>
+                <pre><code id="code10"> 
     var makeCounter = function() {
         var privateCounter = 0;
     

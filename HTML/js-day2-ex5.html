@@ -10,13 +10,35 @@
 </head>
 <body>
     <div id="navbar"></div>
-    <div class="content-container">
+    
+    
+    <div class="content-container"><br><br><br><br>
 
+        <h1>Create dynamic table-rows</h1>
 
-
+        <br><br><br><br><table id="car-table">
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+            <!-- Rows will be populated by JavaScript -->
+        </table>
+        <br><br>
+        <button id="sort-btn">Sort by year</button>
+        <button id="filter-btn">Filter by brand</button>
+        <button id="reset-btn">Reset</button>
+        <br><br>
+        <input type="text" id="filter-input" placeholder="Enter brand">
+        <br><br>
+        <p id="filter-result"></p>
+        <br><br>
 
         
     </div>
+
+
+    <script src="../js-day2/exercise5.js"></script>
     <script src="../resources/loadNavbar.js"></script>
 </body>
     <script src="../main.js"></script>
