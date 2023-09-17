@@ -2,177 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise-3</title>
     <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
-    <script src="../resources/loadNavbar.js"></script>
+    
 </head>
 <body>
     <div id="navbar"></div>
-    
-    <div class="container">
-        <button id="initialize-btn">Load Data</button>
-        <ul id="ul1"></ul>
-        <div id="namesList"></div>
 
-<!-- <form id="nameForm">
-    <input type="text" id="nameInput" placeholder="Enter name">
-    <button type="submit">Add Name</button>
-</form> -->
-
-        
-        <form>
-            <div><input id="name-input" placeholder="Enter new name here"></div>
-            <div><span style="display: inline-block; width: 20em;margin-top: 10px;">Manipulate the individual DOM elements </span>
-                <button id="btn-a1">Add Name</button>
-                <button id="btn-a2">Remove First</button>
-                <button id="btn-a3">Remove Last</button>
-            </div>
-
-            <div style="margin-top: 1em;"><span style="display: inline-block; width: 20em;">Manipulate the Array and re-render the UL</span>
-                <button id="btn-b1">Add Name</button>
-                <button id="btn-b2">Remove First</button>
-                <button id="btn-b3">Remove Last</button>
-            </div>
-        </form>
-
-        <script> // 1
-            //We need to do something here
-            var name = document.getElementById("name-input").value
-            const listViewElement = document.createElement("li");
-            listViewElement.appendChild(document.createTextNode(name))
-            const ul = document.getElementById("ul1").appendChild(listViewElement)
-            //We need to do something here
-            console.log(names)
-            makeList()
-        </script>
-        <script> // 2
-            evt.preventDefault()
-            document.getElementById("ul1").firstChild.remove();
-            //We need to do something here (shift)
-            console.log(names)
-            names.shift()
-            makeList()
-        </script>
-        <script> 
-            evt.preventDefault()
-            document.getElementById("ul1").lastChild.remove();
-            //We need to do something here (pop)
-            console.log(names)
-            names.pop()
-            makeList()
-        </script>
-        <script>
-            evt.preventDefault()
-            var name = document.getElementById("name-input").value
-            names.push(name);
-            makeList();
-        </script>
-        <script>
-            evt.preventDefault()
-            names.shift()
-            makeList()
-        </script>
-        <script>
-            evt.preventDefault()
-            names.pop()
-            makeList();
-        </script>
-            
-<!-- <button id="removeFirst">Remove First</button>
-<button id="removeLast">Remove Last</button> -->
-    
+        <div class="form-box">
+            <br><br><br><br><br></b><h1 style="text-decoration: underline;">Exercise 3 <br><br></h1><br><br>
+        <ul id="name-list">
+            <li>Lars</li>
+            <li>Peter</li>
+            <li>Jan</li>
+            <li>Ian</li>
+        </ul><br><br>
+        <form id="name-form">
+            <label class="car-form-label" for="name-input">Enter a name:</label><br>
+            <input class="car-form-input" type="text" id="name-input" required><br>
+            <button class="car-form-btn" type="submit">Add name</button>
+            <button class="car-form-btn" type="button" id="remove-first">Remove First</button>
+            <button class="car-form-btn" type="button" id="remove-last">Remove Last</button>
+        </form><br><br>
     </div>
 
-    <script>
-        const names = ["Lars", "Peter", "Jan", "Lise", "Janne"];
-        
-// function makeList() {
-//     const namesUL = document.createElement('ul');
-//     names.map(name => {
-//         const listViewElement = document.createElement('li');
-//         listViewElement.textContent = name;
-//         namesUL.appendChild(listViewElement);
-//     });
-//     const container = document.getElementById('namesList');
-//     container.innerHTML = '';  // Clear any previous content
-//     container.appendChild(namesUL);
-// }
+    
 
-// makeList();
 
-        function makeList(){
-            const namesUL = names.map(n => `<li>${n}</li>`.join(""));
-            document.getElementById("ul1").innerHTML = namesUL;
-        }
-        document.getElementById("initialize-btn").onclick = ()=> makeList();
-
-        /****************************************************************************/
-        /*        Strategy where we are manipulating individual DOM-Elements        */
-        /****************************************************************************/
-
-        document.getElementById("btn-a1").onclick = (evt) => {
-            
-        }
-
-        document.getElementById("btn-a2").onclick = (evt) => {
-            //Insert code block 2
-        }
-        document.getElementById("btn-a3").onclick = (evt) => {
-            //Insert code block 3
-        }
-
-        /****************************************************************************/
-        /* Strategy where we are manipulating the data, and then re-render the HTML */
-        /****************************************************************************/
-
-        document.getElementById("btn-b1").onclick = (evt) => {
-            //Insert code block 4
-        }
-
-        document.getElementById("btn-b2").onclick = (evt) => {
-            //Insert code block 5
-        }
-
-        document.getElementById("btn-b3").onclick = (evt) => {
-            //Insert code block 6
-        }
-        //Utility function you can use to escape "untrusted" data inputs
-        //Ref: https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
-        function encode(str) {
-            str = str.replace(/&/g, "&amp;");
-            str = str.replace(/>/g, "&gt;");
-            str = str.replace(/</g, "&lt;");
-            str = str.replace(/"/g, "&quot;");
-            str = str.replace(/'/g, "&#039;");
-            return str;
-        }
-
-    </script>
-    <script>
-        const form = document.getElementById('nameForm');
-        const nameInput = document.getElementById('nameInput');
-
-        form.addEventListener('submit', function(e) {
-            evt.preventDefault();
-            names.push(nameInput.value);
-            makeList();
-            nameInput.value = '';  // Clear input field after adding the name
-        });
-    </script>
-    <script>
-        document.getElementById('removeFirst').addEventListener('click', function() {
-            names.shift();  // Remove the first element
-            makeList();
-        });
-
-        document.getElementById('removeLast').addEventListener('click', function() {
-            names.pop();  // Remove the last element
-            makeList();
-        });
-    </script>
-
-</body>
+    <script src="../js-day2/exercise3.js"></script>
+    <script src="../resources/loadNavbar.js"></script>
     <script src="../main.js"></script>
+</body>
 </html>

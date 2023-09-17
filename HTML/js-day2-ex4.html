@@ -6,13 +6,13 @@
     <title>Exercise-4</title>
     <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
-    <script src="../resources/loadNavbar.js"></script>
 </head>
 <body>
     <div id="navbar"></div>
     <div class="content-container">
 
         <select id="car-selector">
+            <option value="" disabled selected hidden>Choose car</option>
             <!-- Options will be populated by JavaScript -->
         </select><br><br>
         <h2>Selected Brand</h2><br>
@@ -35,11 +35,11 @@
             document.getElementById("car-make-logo").src = `../resources/img/${event.target.value}.svg`;
         });
         </script>
-            
-
-
-        
     </div>
-</body>
+
+    
+    <script src="../resources/loadNavbar.js"></script>
     <script src="../main.js"></script>
+</body>
+    
 </html>

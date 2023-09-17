@@ -6,17 +6,44 @@
     <title>Exercise-5</title>
     <link rel="shortcut icon" href="../resources/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
-    <script src="../resources/loadNavbar.js"></script>
+    
 </head>
 <body>
     <div id="navbar"></div>
-    <div class="content-container">
+    
+    
+    <div class="car-table-container"><br>
 
+        <h1 style="text-decoration: underline;">Create dynamic table-rows</h1>
 
-
+        <br><table id="car-table">
+            <button id="toggle-btn" class="toggle-show-button">Show More</button>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+            </tr>
+            <!-- Rows will be populated by JavaScript -->
+        </table>
+        <p id="filter-result"></p>
+        <input type="text" id="filter-input" placeholder="Enter brand">
+        <br><br>
+        <button id="sort-btn">Sort by year</button>
+        <button id="filter-btn">Filter by brand</button>
+        <button id="reset-btn">Reset</button>
+        <br><br>
+        
+        <br><br>
+        
+        <br><br>
+        
 
         
     </div>
+
+
+    <script src="../js-day2/exercise5.js"></script>
+    <script src="../resources/loadNavbar.js"></script>
 </body>
     <script src="../main.js"></script>
 </html>
